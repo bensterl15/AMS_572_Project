@@ -1,0 +1,51 @@
+% Import the LaTeX style file and load some common packages
+\documentclass[final]{siamart1116}
+\usepackage{amsfonts}
+\usepackage{amsopn}
+
+% Declare the title, author, and any other front matter
+
+% Title
+\title{Applications of Mathematics in Finance}
+
+% Authors: Full names and addresses
+\author{U. N. Known}
+
+% Page headers (visible after the cover page)
+\headers{AMS 510 Term Project}{U. N. Known}
+
+% Start the document
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+
+The topic this paper will cover is Applications of Mathematics in Finance. Although the paper will focus primarily on Linear Algebra and Calculus, the topic is predominately concerned with probability and statistics, as the goal of Financial Modeling is to predict the value of assets in the future, given the history of values. The most historic topic, Brownian Motion, is named in honor of a botanist Robert Brown in 1827, however the math behind it was not formalized by Albert Einstein until 1905; the finance application is using Brownian Motion to model asset value. After this discovery, we explore a different investment strategy published by Harry Markowitz in 1952. Instead of a continuous time approach, Markowitz attempts to minimize volatility in a stock portfolio with a covariance matrix. The miscellaneous topic is a hybrid of the first two topics. We consider the problem of filtering additive white noise from an asset's time series representation; we do this (similarly to the second topic), by considering the series's correlation matrix and demonstrate how this helps to filter the noise.
+
+
+\section{Advanced Calculus Math Concept}
+\label{sec:ac}
+
+In Module Four, existance of functions that were continuous everywhere and differentiable nowhere was briefly discussed. Brownian motion is an example of such a function that models diffusion processes. Standard Brownian Motion obeys four properties: (1) $W(0) = 0$, (2) For $0 < t < s < u, t, s, u \in \mathbb{R}$, $W(u - s)$ and $W(s - t)$ are independent, (3) For $0 < t < s, t, s \in \mathbb{R}$, $W(t - s) \sim \mathcal{N}(0, t - s)$, and (4) For $t \in \mathbb{R} > 0, W(t)$ is continuous in $t$. If W(0) is a different constant, then it is Non-Standard Brownian Motion. This is the most common continuous time process as its distribution comes from The Central Limit Theorem (third property), and it is independent of itself across time (second property). If we want to show that Brownian Motion has no hope of differentiability, we can take $\lim_{h \to 0} \frac{W(t + h) - W(t)}{h}$. Since $W(t + h)$ and $W(t)$ are independent, and each increment is $N(0,\Delta t)$, we get $W(t + h) - W(t) \sim \mathcal{N}(0, h)$. If we estimate the top with $\kappa \sqrt{h}, \kappa \in R$, we get $\lim_{h \to 0} \frac{\kappa \sqrt{h}}{h} = \lim_{h \to 0} \frac{\kappa}{\sqrt{h}} \to \infty$. This suggests that the jumps in Brownian Motion are too big to be differentiable. This can rigorously proven by using the Time Inversion Property of Brownian Motion (Corollary 1.11 in \cite{peres}). Stochastic Calculus can be derived from Brownian Motion by recognizing that the quadratic variation of Brownian Motion is $\Delta t$. The rules for Stochastic Calculus are as follows: $dt\times dt = 0$, $dt\times dW = 0$, and $dW\times dW = dt$. With Stochastic Calculus we can represent any $It\hat{o}$ Process as: $X_t = a_{t}dt + b_{t}dW$ \cite{columbia_lecture}.
+
+I am interested in this application because it can take almost any continuous time process and represent it as a summation of a deterministic part and a random part. Intuitively, every process is either deterministic, random, or a combination. This is useful in finance because it models continuous assets very well. In order to truly appreciate this application, a more rigorous study of the $It\hat{o}$ integral is needed.
+
+\section{Linear Algebra Math Concept}
+
+Conceptually, the goal in managing a portfolio is to make the highest return possible at the lowest possible risk level; the Markowitz Portfolio is an optimization problem that allows one to achieve this under certain assumptions. Given a vector of stock returns in a portfolio $\textbf{x}$, and the proportion of each stock we own $\textbf{w}$, the total return $r = \textbf{x}^{T}\textbf{w}$. We can express the variance of $r$ as $\sigma^2 = Cov(\textbf{x}^{T}\textbf{w},\textbf{x}^{T}\textbf{w}) = \textbf{w}^{T}Cov(\textbf{x}, \textbf{x})\textbf{w} = \textbf{w}^{T}\Sigma\textbf{w}$, where $\Sigma$ is the covariance matrix of $\textbf{x}$. Now, the optimization problem is minimizing the variance of r under the constraint $\textbf{w}\textbf{1} = 1$ ($\textbf{1}$ is vector of all ones; the weights must add up to one). Using Lagrange Multipliers, the optimal weight vector to minimize variance is $\textbf{w}_{opt} = \frac{\Sigma^{-1}\textbf{1}}{\textbf{1}^{T}\Sigma^{-1}\textbf{1}}$ \cite{utah_lecture}. The linear algebra interpretation of this formula is that if $\Sigma = Q \Lambda Q^{-1}$ then $\Sigma^{-1} = Q^{-1} \Lambda^{-1} Q$. The top of the expression: $\Sigma^{-1}\textbf{1}$ is a sum of the eigenvectors of $\Sigma$ that gets scaled by the inverse eigenvalues, then laid back by $Q^{-1}$. The final expression is going to be dominated by the smallest eigenvalue of $\Sigma$. The bottom expression $\textbf{w}^{T}\Sigma\textbf{w}$ can be recognized as a Rayleigh Quotient, which normalizes the numerator. Therefore, we conclude that the optimal weight vector to minimize variance, very closely resembles $Q^{-1}\textbf{v}$, where $\textbf{v}$ is the unit eigenvector that comes from the smallest eigenvalue of $\Sigma$. In the case where the smallest eigenvalue of $\Sigma$ approaches zero, the resultant vector, $Q^{-1}\textbf{v}$, becomes a one-hot vector, and we would conclude that one stock in our portfolio is much less volatile than the others.
+
+I find this topic especially interesting, because the exact same optimization problem is used in Adaptive Beamforming. In the Engineering context, one focuses on the minimum variance response as minimum variance corresponds to the best signal integrity. In this context the weight vectors $\textbf{w}$, actually corresponds to a spatial direction. In order to truly understand this application, it is important to understand how to take expectations of matrices.
+
+\section{Miscellaneous Math Concept}
+
+The previous section involved optimizing a portfolio with a covariance matrix of the different asset returns averaged over time. This next concept will involve a correlation matrix of different times (not categories). Consider a discrete time-series $x$, that is correlated with itself, for example $x_{n} = \rho x_{n - 1} + \epsilon_i$ where $\epsilon_i$ is white (known as AR(1) model). Now suppose we want to eliminate the noise $\epsilon$. This is not straightforward as it is unclear what part of $x$ comes from previous x versus $\epsilon$. To solve this, we use the $Karhunen-Lo\grave{e}ve$ Transform. Define $\Sigma_{n,m} = E(x_{n}x_{n + m})$. We get that the $\Sigma$ matrix is Symmetric and Positive-Definite (and Toeplitz if stationary). This matrix has an eigen-decomposition $\Sigma = Q\Lambda Q^{H}$. The $Karhunen-Lo\grave{e}ve$ transform takes a blocks of data $\textbf{x}$, and returns $Q^{H}\textbf{x}$. If we examine $\Sigma^{'} = E(Q^{H}\textbf{x}_{n} \textbf{x}^{T}_{n + m}Q) = Q^{H}(Q \Lambda Q^{H})Q = \Lambda$ \cite{akansu}. Diagonal $\Lambda$ implies that the output of this transform is uncorrelated with itself. Because the terms are uncorrelated, the smaller terms in the transform are most likely to come from the additive noise. To filter out the noise, we round small values down and take the Inverse $Karhunen-Lo\grave{e}ve$ Transform.
+
+I enjoy this topic as it can be viewed as a generalization of the Fourier Transform for stochastic processes. The $Karhunen-Lo\grave{e}ve$ Transform expresses a time-series with respect to an orthonormal basis that comes from its correlation matrix. The one problem with this concept in practice is if the time series deviates from stationarity, its correlation matrix is no longer valid; this means a new one needs to be estimated from incoming data.
+
+
+% Put references, in BibTeX format, in the file refs.bib
+\bibliographystyle{siamplain}
+\bibliography{refs}
+
+\end{document}
