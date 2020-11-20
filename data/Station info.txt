@@ -19,7 +19,7 @@ Data types:
 	TMAX: average annual maximum temperature (F)
 	TMIN: average annual minimum temperature (F)
 	AWND: average annual wind speed (mph)
-	WDF1: wind direction fo rmaximum wind speed/fastest 1-minute (360-degree compass point directions, eg. 360 = north, 180 = south)
+	WDF1: wind direction for maximum wind speed/fastest 1-minute (360-degree compass point directions, eg. 360 = north, 180 = south)
 	WSF1: maximum wind speed/fastest 1-minute
 	DYFG: number of days with fog
 	DX90: number of days with maximum temperature >= 90 F
