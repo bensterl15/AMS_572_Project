@@ -43,14 +43,8 @@ low_elevation_diffs = c(Redbluff_Diff, eureka_Diff);
 # Create vector of high elevation temperature deviations:
 high_elevation_diffs = c(rye_patch_Diff, Derby_Diff, Winnemucca_Diff);
 
-shapiro.test(Winnemucca_Diff);
+shapiro.test(Derby_Diff);
 shapiro.test(rye_patch_Diff);
-shapiro.test(high_elevation_diffs);
-
-print("Winnemucca");
-print(mean(Winnemucca_Diff, na.rm=TRUE));
-print(sqrt(var(Winnemucca_Diff, na.rm=TRUE)));
-print("");
 
 print("Derby");
 print(mean(Derby_Diff, na.rm=TRUE));
@@ -60,16 +54,6 @@ print("");
 print("rye_patch");
 print(mean(rye_patch_Diff, na.rm=TRUE));
 print(sqrt(var(rye_patch_Diff, na.rm=TRUE)));
-print("");
-
-print("Redbluff");
-print(mean(Redbluff_Diff, na.rm=TRUE));
-print(sqrt(var(Redbluff_Diff, na.rm=TRUE)));
-print("");
-
-print("Eureka");
-print(mean(eureka_Diff, na.rm=TRUE));
-print(sqrt(var(eureka_Diff, na.rm=TRUE)));
 print("");
 
 t.test(rye_patch_Diff, Derby_Diff);
