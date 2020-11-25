@@ -4,45 +4,47 @@ The top-level auxiliary file: report.aux
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 The style file: siamplain.bst
 Reallocating 'name_of_file' (item size: 1) to 5 items.
+I found no \citation commands---while reading file report.aux
 Database file #1: refs.bib
-You've used 4 entries,
+You've used 0 entries,
             2234 wiz_defined-function locations,
-            562 strings with 4377 characters,
-and the built_in function-call counts, 986 in all, are:
-= -- 63
-> -- 45
+            541 strings with 3982 characters,
+and the built_in function-call counts, 17 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 19
-- -- 14
-* -- 62
-:= -- 155
-add.period$ -- 4
-call.type$ -- 4
-change.case$ -- 17
++ -- 0
+- -- 0
+* -- 2
+:= -- 6
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 56
-empty$ -- 115
-format.name$ -- 14
-if$ -- 207
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 15
-num.names$ -- 8
-pop$ -- 44
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 15
+purify$ -- 0
 quote$ -- 0
-skip$ -- 29
+skip$ -- 1
 stack$ -- 0
-substring$ -- 21
-swap$ -- 8
+substring$ -- 0
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 0
 warning$ -- 0
-while$ -- 8
-width$ -- 5
-write$ -- 33
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)

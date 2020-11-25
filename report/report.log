@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.24)  13 NOV 2020 20:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.24)  25 NOV 2020 04:11
 entering extended mode
 **./report.tex
 (report.tex
@@ -409,32 +409,72 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.s
+ty
+\lst@mode=\count282
+\lst@gtempboxa=\box49
+\lst@token=\toks42
+\lst@length=\count283
+\lst@currlwidth=\dimen156
+\lst@column=\count284
+\lst@pos=\count285
+\lst@lostspace=\dimen157
+\lst@width=\dimen158
+\lst@newlines=\count286
+\lst@lineno=\count287
+\lst@maxwidth=\dimen159
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.st
+y
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count288
+\lst@skipnumbers=\count289
+\lst@framebox=\box50
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.c
+fg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.s
+ty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.s
+ty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.s
+ty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
 (C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend
 -pdfmode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count282
-\l__pdf_internal_box=\box49
+\l__kernel_color_stack_int=\count290
+\l__pdf_internal_box=\box51
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-\AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring ON on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+\AtBeginShipoutBox=\box52
+Package hyperref Info: Link coloring ON on input line 20.
 
 (C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.st
 y
@@ -448,11 +488,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ttitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count283
+\c@section@level=\count291
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
  (report.out) (report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
@@ -461,74 +501,102 @@ LaTeX Info: Redefining \nameref on input line 18.
 (C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pd
 f.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count284
-\scratchdimen=\dimen156
-\scratchbox=\box51
-\nofMPsegments=\count285
-\nofMParguments=\count286
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count287
-\MPscratchDim=\dimen157
-\MPnumerator=\count288
-\makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count292
+\scratchdimen=\dimen160
+\scratchbox=\box53
+\nofMPsegments=\count293
+\nofMParguments=\count294
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count295
+\MPscratchDim=\dimen161
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
+\everyMPtoPDFconversion=\toks44
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+\c@lstlisting=\count298
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
 
  (C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 
 (C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 35.
+
+(../data/Hypothesis_1.R
+Overfull \hbox (21.62456pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
+7.
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <5> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+
+Overfull \hbox (62.45876pt too wide) in paragraph at lines 48--49
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.45876pt too wide) in paragraph at lines 55--56
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][] 
+ []
+
+) (report.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
 [1
 
-{C:/Users/bsterling/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-(report.bbl)
+{C:/Users/bsterling/AppData/Local/MiKTeX/pdftex/config/pdftex.map}])
 \tf@thm=\write4
 \openout4 = `report.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
- (report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
+
+(report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 72E6EB66C7363CBFD3FAD48E981861D9;280.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
+(rerunfilecheck)             Checksum: F5E335ABDEAFC796A94021F0FF1D05F2;193.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 8650 strings out of 480790
- 143872 string characters out of 2895425
- 435250 words of memory out of 3000000
- 24516 multiletter control sequences out of 15000+200000
- 535916 words of font info for 38 fonts, out of 3000000 for 9000
+ 11060 strings out of 480790
+ 174417 string characters out of 2895425
+ 661128 words of memory out of 3000000
+ 26840 multiletter control sequences out of 15000+200000
+ 536361 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,8n,41p,2009b,366s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmbx7.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/bsterling/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/bsterling/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/bst
-erling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
-C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr5.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/bsterling/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/bsterling/AppData/Local/P
-rograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/bsterling/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/
-bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmti8.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (2 pages, 183049 bytes).
+ 44i,8n,41p,894b,1944s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\bsterling\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcti0500.pk> <C:\Users\bsterling\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\tcrm0500.pk> <C:\Users\bsterling\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\tcbx0500.pk><C:/Users/bsterling/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/bsterling/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx5.pfb><C:/Users/bsterling/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
+/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
+fb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr5.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/bsterling/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/bsterling/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti7.pfb>
+Output written on report.pdf (1 page, 138629 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 152 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
