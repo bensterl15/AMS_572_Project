@@ -6,12 +6,12 @@ library(latex2exp);
 pdf(NULL);
 
 #data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake.csv"); #1287.8m elevation
-data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake_updated_annual adjustment.csv"); #1287.8m elevation
+data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake_updated_monthly adjustment.csv"); #1287.8m elevation
 #data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates_annual adjustment.csv"); #1260.3m elevation
 data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates_monthly adjustment.csv"); #1260.3m elevation
 #data_rye_patch = read.csv("GSOY/GSOM_rye_patch.csv"); #1260.3m elevation
 
-"""
+"
 Salt_Lake_Temp_Data = data_Salt_Lake$TAVG;
 rye_patch_Temp_Data = data_rye_patch$TAVG;
 
@@ -22,26 +22,27 @@ rye_patch_mean = round(10 * mean(rye_patch_Temp_Data[1:504], na.rm=TRUE)) / 10;
 
 Salt_Lake_Diff = Salt_Lake_Temp_Data[505:length(Salt_Lake_Temp_Data)] - Salt_Lake_mean;
 rye_patch_Diff = rye_patch_Temp_Data[505:length(rye_patch_Temp_Data)] - rye_patch_mean;
-"""
+"
 
-Salt_Lake_Diff = (data_Salt_Lake$TAVG.ADJ)[505:length(data_Salt_Lake$TAVG.ADJ)];
+Salt_Lake_Diff = (data_Salt_Lake$TAVG)[1:length(data_Salt_Lake$TAVG)];
 rye_patch_Diff = (data_rye_patch$TAVG.ADJ)[505:length(data_rye_patch$TAVG.ADJ)];
 
-print("Means:")
-print(Salt_Lake_mean)
-print(rye_patch_mean)
+#print("Means:")
+#print(Salt_Lake_mean)
+#print(rye_patch_mean)
 
-print("Latest temperature:")
-print(tail(Salt_Lake_Temp_Data))
-print(tail(rye_patch_Temp_Data))
+#print("Latest temperature:")
+#print(tail(Salt_Lake_Temp_Data))
+#print(tail(rye_patch_Temp_Data))
 
-
+"
 for(i  in 1:length(Salt_Lake_Diff)){
 	if(is.na(Salt_Lake_Diff[i])| is.na(rye_patch_Diff[i])){
 		Salt_Lake_Diff[i] = NA;
 		rye_patch_Diff[i] = NA;
 	}
 }
+"
 
 #png(file = "Missing value Salt.png");
 #plot(is.na(Salt_Lake_Diff));
