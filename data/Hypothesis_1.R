@@ -6,7 +6,9 @@ library(latex2exp);
 pdf(NULL);
 
 data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake.csv"); #1287.8m elevation
-data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates_monthly adjustment.csv"); #1260.3m elevation
+#data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake_updated_monthly adjustment.csv"); #1287.8m elevation
+data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates_annual adjustment.csv"); #1260.3m elevation
+#data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates_monthly adjustment.csv"); #1260.3m elevation
 #data_rye_patch = read.csv("GSOY/GSOM_rye_patch.csv"); #1260.3m elevation
 
 Salt_Lake_Temp_Data = data_Salt_Lake$TAVG;
@@ -14,11 +16,14 @@ rye_patch_Temp_Data = data_rye_patch$TAVG;
 
 # Calculate means: (must round to first decimal place because this is the precision of our data:
 Salt_Lake_mean = round(10 * mean(Salt_Lake_Temp_Data[1:264], na.rm=TRUE)) / 10;
+
 rye_patch_mean = round(10 * mean(rye_patch_Temp_Data[1:264], na.rm=TRUE)) / 10;
 
 Salt_Lake_Diff = Salt_Lake_Temp_Data[265:length(Salt_Lake_Temp_Data)] - Salt_Lake_mean;
 rye_patch_Diff = rye_patch_Temp_Data[265:length(rye_patch_Temp_Data)] - rye_patch_mean;
 
+
+#Salt_Lake_Diff = (data_Salt_Lake$TAVG.ADJ)[265:length(data_Salt_Lake$TAVG.ADJ)];
 rye_patch_Diff = (data_rye_patch$TAVG.ADJ)[265:length(data_rye_patch$TAVG.ADJ)];
 
 
@@ -38,9 +43,6 @@ for(i  in 1:length(Salt_Lake_Diff)){
 # Remove missing data (values of NA) here:
 Salt_Lake_Diff = Salt_Lake_Diff[!is.na(Salt_Lake_Diff)];
 rye_patch_Diff = rye_patch_Diff[!is.na(rye_patch_Diff)];
-
-print(length(Salt_Lake_Diff));
-print(length(rye_patch_Diff));
 
 # Print mean, variance, and sample size for each dataset:
 print("Salt_Lake");
@@ -80,4 +82,4 @@ abline(a = min(rye_patch_Diff), b = (max(rye_patch_Diff) - min(rye_patch_Diff)) 
 dev.off();
 
 #Perform two sided t-test with unequal variances:
-t.test(rye_patch_Diff, Salt_Lake_Diff, paired=FALSE);
+t.test(rye_patch_Diff, Salt_Lake_Diff, paired=TRUE);
