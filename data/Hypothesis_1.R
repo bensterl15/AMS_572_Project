@@ -12,15 +12,32 @@ Salt_Lake_Temp_Data = data_Salt_Lake$TAVG;
 rye_patch_Temp_Data = data_rye_patch$TAVG;
 
 # Calculate means: (must round to first decimal place because this is the precision of our data:
-Salt_Lake_mean = round(10 * mean(Salt_Lake_Temp_Data[1:258], na.rm=TRUE)) / 10;
-rye_patch_mean = round(10 * mean(rye_patch_Temp_Data[151:415], na.rm=TRUE)) / 10;
+Salt_Lake_mean = round(10 * mean(Salt_Lake_Temp_Data[1:265], na.rm=TRUE)) / 10;
+rye_patch_mean = round(10 * mean(rye_patch_Temp_Data[152:415], na.rm=TRUE)) / 10;
 
-Salt_Lake_Diff = Salt_Lake_Temp_Data[259:length(Salt_Lake_Temp_Data)] - Salt_Lake_mean;
+Salt_Lake_Diff = Salt_Lake_Temp_Data[266:length(Salt_Lake_Temp_Data)] - Salt_Lake_mean;
 rye_patch_Diff = rye_patch_Temp_Data[416:length(rye_patch_Temp_Data)] - rye_patch_mean;
+
+
+for(i  in 1:length(Salt_Lake_Diff)){
+	if(is.na(Salt_Lake_Diff[i])| is.na(rye_patch_Diff[i])){
+		Salt_Lake_Diff[i] = NA;
+		rye_patch_Diff[i] = NA;
+	}
+}
+
+#png(file = "Missing value Salt.png");
+#plot(is.na(Salt_Lake_Diff));
+
+#png(file = "Missing value Rye.png");
+#plot(is.na(rye_patch_Diff));
 
 # Remove missing data (values of NA) here:
 Salt_Lake_Diff = Salt_Lake_Diff[!is.na(Salt_Lake_Diff)];
 rye_patch_Diff = rye_patch_Diff[!is.na(rye_patch_Diff)];
+
+print(length(Salt_Lake_Diff));
+print(length(rye_patch_Diff));
 
 # Print mean, variance, and sample size for each dataset:
 print("Salt_Lake");
@@ -56,4 +73,4 @@ abline(a = min(rye_patch_Diff), b = (max(rye_patch_Diff) - min(rye_patch_Diff)) 
 dev.off();
 
 #Perform two sided t-test with unequal variances:
-t.test(rye_patch_Diff, Salt_Lake_Diff);
+t.test(rye_patch_Diff, Salt_Lake_Diff, paired=TRUE);
