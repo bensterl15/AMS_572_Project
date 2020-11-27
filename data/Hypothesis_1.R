@@ -7,6 +7,7 @@ pdf(NULL);
 
 data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake.csv"); #1287.8m elevation
 data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates.csv"); #1260.3m elevation
+#data_rye_patch = read.csv("GSOY/GSOM_rye_patch.csv"); #1260.3m elevation
 
 Salt_Lake_Temp_Data = data_Salt_Lake$TAVG;
 rye_patch_Temp_Data = data_rye_patch$TAVG;
@@ -41,15 +42,19 @@ print(length(rye_patch_Diff));
 
 # Print mean, variance, and sample size for each dataset:
 print("Salt_Lake");
-print(paste("\U03BC", "=", mean(Salt_Lake_Diff, na.rm=TRUE)));
-print(paste("\U03C3", "=", sqrt(var(Salt_Lake_Diff, na.rm=TRUE))));
+#print(paste("\U03BC", "=", mean(Salt_Lake_Diff, na.rm=TRUE)));
+#print(paste("\U03C3", "=", sqrt(var(Salt_Lake_Diff, na.rm=TRUE))));
+print(paste("mean =", mean(Salt_Lake_Diff, na.rm=TRUE)));
+print(paste("std =", sqrt(var(Salt_Lake_Diff, na.rm=TRUE))));
 print(paste("n =",length(Salt_Lake_Diff)));
 # New line:
 cat("\n");
 
 print("rye_patch");
-print(paste("\U03BC", "=", mean(rye_patch_Diff, na.rm=TRUE)));
-print(paste("\U03C3", "=", sqrt(var(rye_patch_Diff, na.rm=TRUE))));
+#print(paste("\U03BC", "=", mean(rye_patch_Diff, na.rm=TRUE)));
+#print(paste("\U03C3", "=", sqrt(var(rye_patch_Diff, na.rm=TRUE))));
+print(paste("mean =", mean(rye_patch_Diff, na.rm=TRUE)));
+print(paste("mean =", sqrt(var(rye_patch_Diff, na.rm=TRUE))));
 print(paste("n =",length(rye_patch_Diff)));
 # New line:
 cat("\n");
