@@ -6,17 +6,17 @@ library(latex2exp);
 pdf(NULL);
 
 data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake.csv"); #1287.8m elevation
-data_rye_patch = read.csv("GSOY/GSOM_rye_patch.csv"); #1260.3m elevation
+data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates.csv"); #1260.3m elevation
 
 Salt_Lake_Temp_Data = data_Salt_Lake$TAVG;
 rye_patch_Temp_Data = data_rye_patch$TAVG;
 
 # Calculate means: (must round to first decimal place because this is the precision of our data:
-Salt_Lake_mean = round(10 * mean(Salt_Lake_Temp_Data[1:265], na.rm=TRUE)) / 10;
-rye_patch_mean = round(10 * mean(rye_patch_Temp_Data[152:415], na.rm=TRUE)) / 10;
+Salt_Lake_mean = round(10 * mean(Salt_Lake_Temp_Data[1:264], na.rm=TRUE)) / 10;
+rye_patch_mean = round(10 * mean(rye_patch_Temp_Data[1:264], na.rm=TRUE)) / 10;
 
-Salt_Lake_Diff = Salt_Lake_Temp_Data[266:length(Salt_Lake_Temp_Data)] - Salt_Lake_mean;
-rye_patch_Diff = rye_patch_Temp_Data[416:length(rye_patch_Temp_Data)] - rye_patch_mean;
+Salt_Lake_Diff = Salt_Lake_Temp_Data[265:length(Salt_Lake_Temp_Data)] - Salt_Lake_mean;
+rye_patch_Diff = rye_patch_Temp_Data[265:length(rye_patch_Temp_Data)] - rye_patch_mean;
 
 
 for(i  in 1:length(Salt_Lake_Diff)){
