@@ -73,5 +73,8 @@ qqnorm(rye_patch_Diff)
 qqline(rye_patch_Diff);
 dev.off();
 
+#TODO: TEST FOR EQUAL VARIANCES:
+
+
 #Perform two sided t-test with unequal variances:
 t.test(rye_patch_Diff, Salt_Lake_Diff, paired=TRUE);
