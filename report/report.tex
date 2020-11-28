@@ -45,9 +45,86 @@ We then randomly selected 10\% of the data from each station to remove from the 
 
 \section{Hypothesis 1}
 
-def
+\begin{figure}
+  \centering
+  \includegraphics[width=5cm]{../data/img/Salt_Lake_Temp_Diff_Stats.PNG}
+  \caption{Statistics for $\Delta T$ in Salt Lake City}
+  \label{fig:slc_diff_statistics}
+\end{figure}
 
-\tiny\lstinputlisting{../data/Hypothesis_1.R}
+\begin{figure}
+  \centering
+  \includegraphics[width=5cm]{../data/img/Rye_Patch_Temp_Diff_Stats.PNG}
+  \caption{Statistics for $\Delta T$ in Rye Patch}
+  \label{fig:rp_diff_statistics}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=5cm]{../data/img/Salt_Lake_Temp_Diff_Shapiro.PNG}
+  \caption{Shapiro-Wilk Normality Test for $\Delta T$ in Rye Patch}
+  \label{fig:slc_diff_shapiro}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=5cm]{../data/img/Rye_Patch_Temp_Diff_Shapiro.PNG}
+  \caption{Shapiro-Wilk Normality Test for $\Delta T$ in Rye Patch}
+  \label{fig:rp_diff_shapiro}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{../data/img/Salt_Lake_Diff_QQ_Plot.PNG}
+  \caption{QQ-Plot for $\Delta T$ in Salt Lake City}
+  \label{fig:slc_diff_qqplot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{../data/img/Rye_Patch_Diff_QQ_Plot.PNG}
+  \caption{QQ-Plot for $\Delta T$ in Rye Patch}
+  \label{fig:rp_diff_qqplot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{../data/img/diff_paired_test.PNG}
+  \caption{Paired t-test comparing Salt Lake City $\Delta T$ and Rye Patch $\Delta T$}
+  \label{fig:t_test_diffs}
+\end{figure}
+
+\section{Hypothesis 2}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{../data/img/correlation_plot.PNG}
+  \caption{Correlation plot of chosen dependent variables}
+  \label{fig:correlation_plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{../data/img/Temp_vs_sun.PNG}
+  \caption{Salt Lake City Temperature versus Sun}
+  \label{fig:temp_vs_sun}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{../data/img/Temp_vs_dThunderstorm.PNG}
+  \caption{Salt Lake City Temperature versus Days of Thunderstorms}
+  \label{fig:temp_vs_dthunderstorms}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=15cm]{../data/img/Temp_vs_Percipitation.PNG}
+  \caption{Salt Lake City Temperature versus Percipitation}
+  \label{fig:temp_vs_percipitation}
+\end{figure}
+
+%\tiny\lstinputlisting{../data/Hypothesis_1.R}
 
 % Put references, in BibTeX format, in the file refs.bib
 \bibliographystyle{siamplain}
