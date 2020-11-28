@@ -126,7 +126,7 @@ shapiro.test(Salt_Lake_Percipitation);
 
 # Generate Correlation Matrix:
 M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Percipitation)
-png("img/correlation_plot.png");
+png("img/correlation_plot_missing_data.png");
 corrplot(cor(M));
 
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
@@ -144,15 +144,15 @@ summary(fit3);
 
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
 
-png("img/Temp_vs_sun.png");
+png("img/Temp_vs_sun_missing_data.png");
 plot(Salt_Lake_Sun, Salt_Lake_Temperature);
 abline(lm(Salt_Lake_Temperature~Salt_Lake_Sun));
 
-png("img/Temp_vs_dThunderstorm.png");
+png("img/Temp_vs_dThunderstorm_missing_data.png");
 plot(Salt_Lake_dThunderstorm, Salt_Lake_Temperature);
 abline(lm(Salt_Lake_Temperature~Salt_Lake_dThunderstorm));
 
-png("img/Temp_vs_Percipitation.png");
+png("img/Temp_vs_Percipitation_missing_data.png");
 plot(Salt_Lake_Percipitation, Salt_Lake_Temperature);
 abline(lm(Salt_Lake_Temperature~Salt_Lake_Percipitation));
 

@@ -103,14 +103,14 @@ shapiro.test(Salt_Lake_Diff);
 shapiro.test(rye_patch_Diff);
 
 # Visualize with QQ plots:
-png(file = "img/Salt_Lake_Diff_QQ_Plot.png");
+png(file = "img/Salt_Lake_Diff_QQ_Plot_missing_data.png");
 
 #qqPlot(x=Salt_Lake_Diff, distribution="norm")
 qqnorm(Salt_Lake_Diff)
 qqline(Salt_Lake_Diff);
 dev.off();
 
-png(file = "img/Rye_Patch_Diff_QQ_Plot.png");
+png(file = "img/Rye_Patch_Diff_QQ_Plot_missing_data.png");
 
 #qqPlot(x=Salt_Lake_Diff, distribution="norm")
 qqnorm(rye_patch_Diff)
