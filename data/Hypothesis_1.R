@@ -12,7 +12,7 @@ data_rye_patch = read.csv("GSOY/GSOM_rye_patch_updated dates_monthly adjustment_
 Salt_Lake_Diff = (data_Salt_Lake$TAVG.ADJ)[1:length(data_Salt_Lake$TAVG.ADJ)];
 rye_patch_Diff = (data_rye_patch$TAVG.ADJ)[1:length(data_rye_patch$TAVG.ADJ)];
 
-# If one is missing value, remove the other value:
+# If one is missing value in a given year, remove the value from the other dataset:
 for(i  in 1:length(Salt_Lake_Diff)){
 	if(is.na(Salt_Lake_Diff[i])| is.na(rye_patch_Diff[i])){
 		Salt_Lake_Diff[i] = NA;
@@ -45,16 +45,12 @@ shapiro.test(rye_patch_Diff);
 
 # Visualize with QQ plots:
 png(file = "img/Salt_Lake_Diff_QQ_Plot.png");
-
-#qqPlot(x=Salt_Lake_Diff, distribution="norm")
-qqnorm(Salt_Lake_Diff)
+qqnorm(Salt_Lake_Diff, , main=expression(paste("Q-Q Plot for ", Delta, "T in Salt Lake City")));
 qqline(Salt_Lake_Diff);
 dev.off();
 
 png(file = "img/Rye_Patch_Diff_QQ_Plot.png");
-
-#qqPlot(x=Salt_Lake_Diff, distribution="norm")
-qqnorm(rye_patch_Diff)
+qqnorm(rye_patch_Diff, main=expression(paste("Q-Q Plot for ", Delta, "T in Rye Patch Dam")));
 qqline(rye_patch_Diff);
 dev.off();
 
@@ -71,7 +67,7 @@ print("10% extra missing data:");
 Salt_Lake_Diff[sample(1:length(Salt_Lake_Diff), ceiling(0.1*length(Salt_Lake_Diff)))] = NA;
 rye_patch_Diff[sample(1:length(rye_patch_Diff), ceiling(0.1*length(rye_patch_Diff)))] = NA;
 
-# If one is missing value, remove the other value:
+# If one is missing value in a given year, remove the value from the other dataset:
 for(i  in 1:length(Salt_Lake_Diff)){
 	if(is.na(Salt_Lake_Diff[i])| is.na(rye_patch_Diff[i])){
 		Salt_Lake_Diff[i] = NA;
@@ -104,16 +100,12 @@ shapiro.test(rye_patch_Diff);
 
 # Visualize with QQ plots:
 png(file = "img/Salt_Lake_Diff_QQ_Plot_missing_data.png");
-
-#qqPlot(x=Salt_Lake_Diff, distribution="norm")
-qqnorm(Salt_Lake_Diff)
+qqnorm(Salt_Lake_Diff, main=expression(paste("Q-Q Plot for ", Delta, "T in Salt Lake City")));
 qqline(Salt_Lake_Diff);
 dev.off();
 
 png(file = "img/Rye_Patch_Diff_QQ_Plot_missing_data.png");
-
-#qqPlot(x=Salt_Lake_Diff, distribution="norm")
-qqnorm(rye_patch_Diff)
+qqnorm(rye_patch_Diff, main=expression(paste("Q-Q Plot for ", Delta, "T in Rye Patch Dam")));
 qqline(rye_patch_Diff);
 dev.off();
 

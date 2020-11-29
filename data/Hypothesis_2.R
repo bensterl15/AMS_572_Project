@@ -6,10 +6,14 @@ pdf(NULL);
 
 data_Salt_Lake = read.csv("GSOY/GSOM_Salt_Lake_updated_monthly adjustment_v3.csv"); #1287.8m elevation
 
-Salt_Lake_Temperature = (data_Salt_Lake$TAVG)[1:length(data_Salt_Lake$TAVG)];
-Salt_Lake_Sun = (data_Salt_Lake$TSUN)[1:length(data_Salt_Lake$TSUN)];
-Salt_Lake_dThunderstorm = (data_Salt_Lake$DYTS)[1:length(data_Salt_Lake$DYTS)];
-Salt_Lake_Percipitation = (data_Salt_Lake$PRCP)[1:length(data_Salt_Lake$PRCP)];
+#Corresponds to 1965 to 2004
+starting_index = 206;
+ending_index = 685;
+
+Salt_Lake_Temperature = (data_Salt_Lake$TAVG)[1:ending_index];
+Salt_Lake_Sun = (data_Salt_Lake$TSUN)[1:ending_index];
+Salt_Lake_dThunderstorm = (data_Salt_Lake$DYTS)[1:ending_index];
+Salt_Lake_Percipitation = (data_Salt_Lake$PRCP)[1:ending_index];
 
 # All values of 0 should go to NA:
 for(i in 1:length(Salt_Lake_Sun)){
@@ -42,6 +46,7 @@ shapiro.test(Salt_Lake_Percipitation);
 
 # Generate Correlation Matrix:
 M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Percipitation)
+colnames(M) = c("Sunlight","Days of Thunderstorms","Percipitation");
 png("img/correlation_plot.png");
 corrplot(cor(M));
 
@@ -57,6 +62,9 @@ summary(fit2);
 
 fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Percipitation);
 summary(fit3);
+
+fit4 = lm(Salt_Lake_Temperature ~ Salt_Lake_Percipitation);
+summary(fit4);
 
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
 
@@ -126,6 +134,7 @@ shapiro.test(Salt_Lake_Percipitation);
 
 # Generate Correlation Matrix:
 M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Percipitation)
+colnames(M) = c("Sunlight","Days of Thunderstorms","Percipitation");
 png("img/correlation_plot_missing_data.png");
 corrplot(cor(M));
 

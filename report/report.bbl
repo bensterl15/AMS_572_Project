@@ -1,3 +1,21 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{gsom_data}
+{\sc J.~H. Lawrimore, R.~Ray, S.~Applequist, B.~Korzeniewski, and M.~J. Menne},
+  {\em Global summary of the month (gsom) dataset, version 1}, 2016,
+  \url{https://doi.org/10.7289/V5QV3JJ5} (accessed 2020-11-14).
+
+\bibitem{temp_anomaly}
+{\sc NASA}, {\em The exploring the environment project},
+  \url{http://ete.cet.edu/gcc/?/globaltemp_anomalies/}.
+
+\bibitem{obama_report}
+{\sc {The White House}}, {\em The threat of carbon pollution: Utah},
+  \url{https://obamawhitehouse.archives.gov/sites/default/files/docs/state-reports/climate/Utah%20Fact%20Sheet.pdf}.
+
+\bibitem{epa_utah}
+{\sc {United States Environmental Protection Agency}}, {\em What climate change
+  means for utah},
+  \url{https://19january2017snapshot.epa.gov/sites/production/files/2016-09/documents/climate-change-ut.pdf}.
 
 \end{thebibliography}
