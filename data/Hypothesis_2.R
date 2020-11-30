@@ -13,7 +13,7 @@ ending_index = 685;
 Salt_Lake_Temperature = (data_Salt_Lake$TAVG)[1:ending_index];
 Salt_Lake_Sun = (data_Salt_Lake$TSUN)[1:ending_index];
 Salt_Lake_dThunderstorm = (data_Salt_Lake$DYTS)[1:ending_index];
-Salt_Lake_Percipitation = (data_Salt_Lake$PRCP)[1:ending_index];
+Salt_Lake_Precipitation = (data_Salt_Lake$PRCP)[1:ending_index];
 
 # All values of 0 should go to NA:
 for(i in 1:length(Salt_Lake_Sun)){
@@ -25,11 +25,11 @@ for(i in 1:length(Salt_Lake_Sun)){
 }
 
 for(i  in 1:length(Salt_Lake_Sun)){
-	if(is.na(Salt_Lake_Sun[i])| is.na(Salt_Lake_Temperature[i]) | is.na(Salt_Lake_dThunderstorm[i]) | is.na(Salt_Lake_Percipitation[i])){
+	if(is.na(Salt_Lake_Sun[i])| is.na(Salt_Lake_Temperature[i]) | is.na(Salt_Lake_dThunderstorm[i]) | is.na(Salt_Lake_Precipitation[i])){
 		Salt_Lake_Sun[i] = NA;
 		Salt_Lake_Temperature[i] = NA;
 		Salt_Lake_dThunderstorm[i] = NA;
-		Salt_Lake_Percipitation[i] = NA;
+		Salt_Lake_Precipitation[i] = NA;
 	}
 }
 
@@ -37,22 +37,22 @@ for(i  in 1:length(Salt_Lake_Sun)){
 Salt_Lake_Sun = Salt_Lake_Sun[!is.na(Salt_Lake_Sun)];
 Salt_Lake_Temperature = Salt_Lake_Temperature[!is.na(Salt_Lake_Temperature)];
 Salt_Lake_dThunderstorm = Salt_Lake_dThunderstorm[!is.na(Salt_Lake_dThunderstorm)];
-Salt_Lake_Percipitation = Salt_Lake_Percipitation[!is.na(Salt_Lake_Percipitation)];
+Salt_Lake_Precipitation = Salt_Lake_Precipitation[!is.na(Salt_Lake_Precipitation)];
 
 shapiro.test(Salt_Lake_Temperature);
 shapiro.test(Salt_Lake_Sun);
 shapiro.test(Salt_Lake_dThunderstorm);
-shapiro.test(Salt_Lake_Percipitation);
+shapiro.test(Salt_Lake_Precipitation);
 
 # Generate Correlation Matrix:
-M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Percipitation)
-colnames(M) = c("Sunlight","Days of Thunderstorms","Percipitation");
+M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Precipitation)
+colnames(M) = c("Sunlight","Days of Thunderstorms","Precipitation");
 png("img/correlation_plot.png");
 corrplot(cor(M));
 
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
-AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Percipitation))
+AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
 
 fit1 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun);
 summary(fit1);
@@ -60,10 +60,10 @@ summary(fit1);
 fit2 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm);
 summary(fit2);
 
-fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Percipitation);
+fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
 summary(fit3);
 
-fit4 = lm(Salt_Lake_Temperature ~ Salt_Lake_Percipitation);
+fit4 = lm(Salt_Lake_Temperature ~ Salt_Lake_Precipitation);
 summary(fit4);
 
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
@@ -76,16 +76,16 @@ png("img/Temp_vs_dThunderstorm.png");
 plot(Salt_Lake_dThunderstorm, Salt_Lake_Temperature);
 abline(lm(Salt_Lake_Temperature~Salt_Lake_dThunderstorm));
 
-png("img/Temp_vs_Percipitation.png");
-plot(Salt_Lake_Percipitation, Salt_Lake_Temperature);
-abline(lm(Salt_Lake_Temperature~Salt_Lake_Percipitation));
+png("img/Temp_vs_Precipitation.png");
+plot(Salt_Lake_Precipitation, Salt_Lake_Temperature);
+abline(lm(Salt_Lake_Temperature~Salt_Lake_Precipitation));
 
 print(length(Salt_Lake_Sun))
 print(length(Salt_Lake_Temperature))
 
 Salt_Lake_dThunderstorm = Salt_Lake_dThunderstorm / length(Salt_Lake_dThunderstorm);
 
-#plot(Salt_Lake_dThunderstorm, Salt_Lake_Percipitation);
+#plot(Salt_Lake_dThunderstorm, Salt_Lake_Precipitation);
 
 #SANITY CHECK:
 "
@@ -110,14 +110,14 @@ print("10% extra missing data:");
 Salt_Lake_Sun[sample(1:length(Salt_Lake_Sun), ceiling(0.1*length(Salt_Lake_Sun)))] = NA;
 Salt_Lake_Temperature[sample(1:length(Salt_Lake_Temperature), ceiling(0.1*length(Salt_Lake_Temperature)))] = NA;
 Salt_Lake_dThunderstorm[sample(1:length(Salt_Lake_dThunderstorm), ceiling(0.1*length(Salt_Lake_dThunderstorm)))] = NA;
-Salt_Lake_Percipitation[sample(1:length(Salt_Lake_Percipitation), ceiling(0.1*length(Salt_Lake_Percipitation)))] = NA;
+Salt_Lake_Precipitation[sample(1:length(Salt_Lake_Precipitation), ceiling(0.1*length(Salt_Lake_Precipitation)))] = NA;
 
 for(i  in 1:length(Salt_Lake_Sun)){
-	if(is.na(Salt_Lake_Sun[i])| is.na(Salt_Lake_Temperature[i]) | is.na(Salt_Lake_dThunderstorm[i]) | is.na(Salt_Lake_Percipitation[i])){
+	if(is.na(Salt_Lake_Sun[i])| is.na(Salt_Lake_Temperature[i]) | is.na(Salt_Lake_dThunderstorm[i]) | is.na(Salt_Lake_Precipitation[i])){
 		Salt_Lake_Sun[i] = NA;
 		Salt_Lake_Temperature[i] = NA;
 		Salt_Lake_dThunderstorm[i] = NA;
-		Salt_Lake_Percipitation[i] = NA;
+		Salt_Lake_Precipitation[i] = NA;
 	}
 }
 
@@ -125,22 +125,22 @@ for(i  in 1:length(Salt_Lake_Sun)){
 Salt_Lake_Sun = Salt_Lake_Sun[!is.na(Salt_Lake_Sun)];
 Salt_Lake_Temperature = Salt_Lake_Temperature[!is.na(Salt_Lake_Temperature)];
 Salt_Lake_dThunderstorm = Salt_Lake_dThunderstorm[!is.na(Salt_Lake_dThunderstorm)];
-Salt_Lake_Percipitation = Salt_Lake_Percipitation[!is.na(Salt_Lake_Percipitation)];
+Salt_Lake_Precipitation = Salt_Lake_Precipitation[!is.na(Salt_Lake_Precipitation)];
 
 shapiro.test(Salt_Lake_Temperature);
 shapiro.test(Salt_Lake_Sun);
 shapiro.test(Salt_Lake_dThunderstorm);
-shapiro.test(Salt_Lake_Percipitation);
+shapiro.test(Salt_Lake_Precipitation);
 
 # Generate Correlation Matrix:
-M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Percipitation)
-colnames(M) = c("Sunlight","Days of Thunderstorms","Percipitation");
+M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Precipitation)
+colnames(M) = c("Sunlight","Days of Thunderstorms","Precipitation");
 png("img/correlation_plot_missing_data.png");
 corrplot(cor(M));
 
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
-AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Percipitation))
+AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
 
 fit1 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun);
 summary(fit1);
@@ -148,7 +148,7 @@ summary(fit1);
 fit2 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm);
 summary(fit2);
 
-fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Percipitation);
+fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
 summary(fit3);
 
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
@@ -161,9 +161,9 @@ png("img/Temp_vs_dThunderstorm_missing_data.png");
 plot(Salt_Lake_dThunderstorm, Salt_Lake_Temperature);
 abline(lm(Salt_Lake_Temperature~Salt_Lake_dThunderstorm));
 
-png("img/Temp_vs_Percipitation_missing_data.png");
-plot(Salt_Lake_Percipitation, Salt_Lake_Temperature);
-abline(lm(Salt_Lake_Temperature~Salt_Lake_Percipitation));
+png("img/Temp_vs_Precipitation_missing_data.png");
+plot(Salt_Lake_Precipitation, Salt_Lake_Temperature);
+abline(lm(Salt_Lake_Temperature~Salt_Lake_Precipitation));
 
 print(length(Salt_Lake_Sun))
 print(length(Salt_Lake_Temperature))
