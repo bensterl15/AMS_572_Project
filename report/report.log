@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.24)  29 NOV 2020 04:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.24)  29 NOV 2020 22:10
 entering extended mode
 **./report.tex
 (report.tex
@@ -544,61 +544,60 @@ Package pdftex.def Info: ../data/img/Rye_Patch_Diff_QQ_Plot.PNG  used on input
 line 60.
 (pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
 ) [2]
-(second_hypothesis.tex
-<../data/img/Temp_vs_sun.PNG, id=62, 481.8pt x 481.8pt>
+(second_hypothesis.tex [3 <../data/img/Salt_Lake_Diff_QQ_Plot.PNG>]
+<../data/img/Temp_vs_sun.PNG, id=69, 481.8pt x 481.8pt>
 File: ../data/img/Temp_vs_sun.PNG Graphic file (type png)
 <use ../data/img/Temp_vs_sun.PNG>
-Package pdftex.def Info: ../data/img/Temp_vs_sun.PNG  used on input line 5.
+Package pdftex.def Info: ../data/img/Temp_vs_sun.PNG  used on input line 7.
 (pdftex.def)             Requested size: 426.79134pt x 426.801pt.
 
-Overfull \hbox (56.4076pt too wide) in paragraph at lines 5--6
+Overfull \hbox (56.4076pt too wide) in paragraph at lines 7--8
  [][] 
  []
 
-<../data/img/Temp_vs_dThunderstorm.PNG, id=63, 481.8pt x 481.8pt>
+<../data/img/Temp_vs_dThunderstorm.PNG, id=70, 481.8pt x 481.8pt>
 File: ../data/img/Temp_vs_dThunderstorm.PNG Graphic file (type png)
 <use ../data/img/Temp_vs_dThunderstorm.PNG>
 Package pdftex.def Info: ../data/img/Temp_vs_dThunderstorm.PNG  used on input l
-ine 12.
+ine 14.
 (pdftex.def)             Requested size: 426.79134pt x 426.801pt.
 
-Overfull \hbox (56.4076pt too wide) in paragraph at lines 12--13
+Overfull \hbox (56.4076pt too wide) in paragraph at lines 14--15
  [][] 
  []
 
-<../data/img/Temp_vs_Percipitation.PNG, id=64, 481.8pt x 481.8pt>
+<../data/img/Temp_vs_Percipitation.PNG, id=71, 481.8pt x 481.8pt>
 File: ../data/img/Temp_vs_Percipitation.PNG Graphic file (type png)
 <use ../data/img/Temp_vs_Percipitation.PNG>
 Package pdftex.def Info: ../data/img/Temp_vs_Percipitation.PNG  used on input l
-ine 19.
+ine 21.
 (pdftex.def)             Requested size: 426.79134pt x 426.801pt.
 
-Overfull \hbox (56.4076pt too wide) in paragraph at lines 19--20
+Overfull \hbox (56.4076pt too wide) in paragraph at lines 21--22
  [][] 
  []
 
-[3 <../data/img/Salt_Lake_Diff_QQ_Plot.PNG>]
-<../data/img/correlation_plot.PNG, id=80, 481.8pt x 481.8pt>
+<../data/img/correlation_plot.PNG, id=77, 481.8pt x 481.8pt>
 File: ../data/img/correlation_plot.PNG Graphic file (type png)
 <use ../data/img/correlation_plot.PNG>
-Package pdftex.def Info: ../data/img/correlation_plot.PNG  used on input line 2
-8.
+Package pdftex.def Info: ../data/img/correlation_plot.PNG  used on input line 3
+2.
 (pdftex.def)             Requested size: 284.52756pt x 284.53154pt.
 
-Overfull \hbox (16.29pt too wide) in paragraph at lines 33--34
-[]\OT1/cmr/m/n/10 TODO: TALK ABOUT PER-FORM-ING RE-GRES-SION WITH SUN, SUN/DTHU
-N-
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) (compilation_instructions.tex [4 <../data/img/Rye_Patch_Diff_QQ_Plot.PNG>]
-[5 <../data/img/Temp_vs_sun.PNG>]) (report.bbl
+ [4 <../data/img/Rye_Patch_Diff_QQ_Plot.PNG>] [5 <../data/img/Temp_vs_sun.PNG>]
+ [6 <../data/img/Temp_vs_dThunderstorm.PNG>] [7 <../data/img/Temp_vs_Percipitat
+ion.PNG>])
+(compilation_instructions.tex [8 <../data/img/correlation_plot.PNG (PNG copy)>]
+) (report.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 []\OT1/cmr/m/sc/8 NASA\OT1/cmr/m/n/8 , \OT1/cmr/m/it/8 The ex-plor-ing the en-v
 i-ron-ment project\OT1/cmr/m/n/8 , [][]$http : / / ete . cet . edu / gcc / ? / 
 globaltemp[]
  []
 
-[6 <../data/img/Temp_vs_dThunderstorm.PNG>]
+
 Underfull \hbox (badness 4001) in paragraph at lines 17--20
 \OT1/cmr/m/it/8 utah\OT1/cmr/m/n/8 , [][]$https : / / 19january2017snapshot . e
 pa . gov / sites / production / les / 2016-[]09 / documents /
@@ -609,8 +608,7 @@ pa . gov / sites / production / les / 2016-[]09 / documents /
 \openout4 = `report.thm'.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
- [7 <../data/img/Temp_vs_Percipitation.PNG>] [8 <../data/img/correlation_plot.P
-NG (PNG copy)>]
+ [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
  (report.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
@@ -620,13 +618,13 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
  ) 
 Here is how much of TeX's memory you used:
- 10118 strings out of 480790
- 166436 string characters out of 2895425
+ 10119 strings out of 480790
+ 166442 string characters out of 2895425
  611128 words of memory out of 3000000
  25915 multiletter control sequences out of 15000+200000
  538444 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,41p,1359b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,41p,1843b,368s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmcsc10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/
@@ -641,9 +639,9 @@ pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/bsterling/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/bsterling/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/bsterling/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on report.pdf (8 pages, 220655 bytes).
+Output written on report.pdf (9 pages, 226323 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 177 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
