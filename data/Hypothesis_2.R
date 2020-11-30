@@ -74,9 +74,6 @@ AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_La
 fit1 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
 summary(fit1);
 
-fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
-summary(fit3);
-
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
 
 png("img/Temp_vs_sun.png");
@@ -152,12 +149,6 @@ corrplot(cor(M));
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
-
-fit1 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun);
-summary(fit1);
-
-fit2 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm);
-summary(fit2);
 
 fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
 summary(fit3);

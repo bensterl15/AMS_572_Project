@@ -98,16 +98,17 @@ cat("\n");
 shapiro.test(Salt_Lake_Diff);
 shapiro.test(rye_patch_Diff);
 
+# Comment out so we don't override old QQ plots (so they match what is in report)
 # Visualize with QQ plots:
-png(file = "img/Salt_Lake_Diff_QQ_Plot_missing_data.png");
-qqnorm(Salt_Lake_Diff, main=expression(paste("Q-Q Plot for ", Delta, "T in Salt Lake City")));
-qqline(Salt_Lake_Diff);
-dev.off();
+#png(file = "img/Salt_Lake_Diff_QQ_Plot_missing_data.png");
+#qqnorm(Salt_Lake_Diff, main=expression(paste("Q-Q Plot for ", Delta, "T in Salt Lake City")));
+#qqline(Salt_Lake_Diff);
+#dev.off();
 
-png(file = "img/Rye_Patch_Diff_QQ_Plot_missing_data.png");
-qqnorm(rye_patch_Diff, main=expression(paste("Q-Q Plot for ", Delta, "T in Rye Patch Dam")));
-qqline(rye_patch_Diff);
-dev.off();
+#png(file = "img/Rye_Patch_Diff_QQ_Plot_missing_data.png");
+#qqnorm(rye_patch_Diff, main=expression(paste("Q-Q Plot for ", Delta, "T in Rye Patch Dam")));
+#qqline(rye_patch_Diff);
+#dev.off();
 
 #Perform paired two sided t-test:
 t.test(rye_patch_Diff, Salt_Lake_Diff, paired=TRUE);

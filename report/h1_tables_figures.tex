@@ -1,0 +1,107 @@
+\begin{table}[ht]
+ \begin{centering}
+ \begin{tabular}{|c|c c|} 
+ \hline
+ $$ & $\Delta Temp$ Salt Lake City & $\Delta Temp$ Rye Patch \\ [0.5ex] 
+ \hline\hline
+  $\mu$ & 1.1229 & 0.1317 \\ 
+ \hline
+ $\sigma$ & 1.9765 & 1.9226 \\
+  \hline
+ $n$ & 487 & 487 \\ 
+  \hline
+ $P_{Shapiro}$ & 0.0166 & 0.0003 \\ 
+ \hline
+ \end{tabular}
+ \caption{Temperature Difference Statistics}
+ \label{tab:temp_diffs}
+ \end{centering}
+\end{table}
+
+\begin{table}[ht]
+ \begin{centering}
+ \begin{tabular}{|c|c|} 
+  \hline
+  Parameter & Value \\
+  \hline\hline
+  $t$ & -16.46 \\ 
+ \hline
+ $df$ & 486 \\
+  \hline
+ $P$ & $2.2 \times 10^{-16}$ \\ 
+  \hline
+ Conf. Interval & $(-1.1095, -0.8728)$ \\ 
+ \hline
+ \end{tabular}
+ \caption{Paired t Test Results for Temperature Difference}
+ \label{tab:t_test_results}
+ \end{centering}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{../data/img/Salt_Lake_Diff_QQ_Plot.PNG}
+  \caption{Q-Q Plot in Salt Lake City}
+  \label{fig:slc_diff_qqplot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{../data/img/Rye_Patch_Diff_QQ_Plot.PNG}
+  \caption{Q-Q Plot in Rye Patch}
+  \label{fig:rp_diff_qqplot}
+\end{figure}
+
+\begin{table}[ht]
+ \begin{centering}
+ \begin{tabular}{|c|c c|} 
+ \hline
+ $$ & $\Delta Temp$ Salt Lake City & $\Delta Temp$ Rye Patch \\ [0.5ex] 
+ \hline\hline
+  $\mu$ & 1.1282 & 0.1457 \\ 
+ \hline
+ $\sigma$ & 1.9850 & 1.9051 \\
+  \hline
+ $n$ & 390 & 390 \\ 
+  \hline
+ $P_{Shapiro}$ & 0.0238 & 0.0005 \\ 
+ \hline
+ \end{tabular}
+ \caption{Temperature Difference Statistics for Missing Values}
+ \label{tab:temp_diffs_missing}
+ \end{centering}
+\end{table}
+
+\begin{table}[ht]
+ \begin{centering}
+ \begin{tabular}{|c|c|} 
+  \hline
+  Parameter & Value \\
+  \hline\hline
+  $t$ & -15.03 \\ 
+ \hline
+ $df$ & 389 \\
+  \hline
+ $P$ & $2.2 \times 10^{-16}$ \\ 
+  \hline
+ Conf. Interval & $(-1.1109, -0.8539)$ \\ 
+ \hline
+ \end{tabular}
+ \caption{Paired t Test Results for Temperature Difference for Missing Values}
+ \label{tab:t_test_results_missing}
+ \end{centering}
+\end{table}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{../data/img/Salt_Lake_Diff_QQ_Plot_missing_data.png}
+  \caption{Q-Q Plot in Salt Lake City with 10\% missing data}
+  \label{fig:slc_diff_qqplot_missing}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{../data/img/Rye_Patch_Diff_QQ_Plot_missing_data.png}
+  \caption{Q-Q Plot in Rye Patch with 10\% missing data}
+  \label{fig:rp_diff_qqplot_missing}
+\end{figure}
