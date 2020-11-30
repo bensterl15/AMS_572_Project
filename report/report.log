@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.24)  30 NOV 2020 04:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.24)  30 NOV 2020 15:02
 entering extended mode
 **./report.tex
 (report.tex
@@ -535,35 +535,35 @@ Underfull \vbox (badness 1275) has occurred while \output is active []
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 22.
+(amsmath)                 on input line 18.
 
-) [3] (compilation_instructions.tex) (report.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
+[3]) (missing_data.tex) (compilation_instructions.tex [4]) (report.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 []\OT1/cmr/m/sc/8 NASA\OT1/cmr/m/n/8 , \OT1/cmr/m/it/8 The ex-plor-ing the en-v
 i-ron-ment project\OT1/cmr/m/n/8 , [][]$http : / / ete . cet . edu / gcc / ? / 
 globaltemp[]
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 17--20
+Underfull \hbox (badness 4001) in paragraph at lines 22--25
 \OT1/cmr/m/it/8 utah\OT1/cmr/m/n/8 , [][]$https : / / 19january2017snapshot . e
 pa . gov / sites / production / les / 2016-[]09 / documents /
  []
 
-) [4] (h1_tables_figures.tex
-<../data/img/Salt_Lake_Diff_QQ_Plot.PNG, id=100, 481.8pt x 481.8pt>
+) [5] (h1_tables_figures.tex
+<../data/img/Salt_Lake_Diff_QQ_Plot.PNG, id=113, 481.8pt x 481.8pt>
 File: ../data/img/Salt_Lake_Diff_QQ_Plot.PNG Graphic file (type png)
 <use ../data/img/Salt_Lake_Diff_QQ_Plot.PNG>
 Package pdftex.def Info: ../data/img/Salt_Lake_Diff_QQ_Plot.PNG  used on input 
 line 43.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
-<../data/img/Rye_Patch_Diff_QQ_Plot.PNG, id=101, 481.8pt x 481.8pt>
+<../data/img/Rye_Patch_Diff_QQ_Plot.PNG, id=114, 481.8pt x 481.8pt>
 File: ../data/img/Rye_Patch_Diff_QQ_Plot.PNG Graphic file (type png)
 <use ../data/img/Rye_Patch_Diff_QQ_Plot.PNG>
 Package pdftex.def Info: ../data/img/Rye_Patch_Diff_QQ_Plot.PNG  used on input 
 line 50.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
-<../data/img/Salt_Lake_Diff_QQ_Plot_missing_data.png, id=102, 481.8pt x 481.8pt
+<../data/img/Salt_Lake_Diff_QQ_Plot_missing_data.png, id=115, 481.8pt x 481.8pt
 >
 File: ../data/img/Salt_Lake_Diff_QQ_Plot_missing_data.png Graphic file (type pn
 g)
@@ -571,7 +571,7 @@ g)
 Package pdftex.def Info: ../data/img/Salt_Lake_Diff_QQ_Plot_missing_data.png  u
 sed on input line 97.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
-<../data/img/Rye_Patch_Diff_QQ_Plot_missing_data.png, id=103, 481.8pt x 481.8pt
+<../data/img/Rye_Patch_Diff_QQ_Plot_missing_data.png, id=116, 481.8pt x 481.8pt
 >
 File: ../data/img/Rye_Patch_Diff_QQ_Plot_missing_data.png Graphic file (type pn
 g)
@@ -580,31 +580,31 @@ Package pdftex.def Info: ../data/img/Rye_Patch_Diff_QQ_Plot_missing_data.png  u
 sed on input line 104.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
 ) (h2_tables_figures.tex
-<../data/img/Temp_vs_sun.PNG, id=104, 481.8pt x 481.8pt>
+<../data/img/Temp_vs_sun.PNG, id=117, 481.8pt x 481.8pt>
 File: ../data/img/Temp_vs_sun.PNG Graphic file (type png)
 <use ../data/img/Temp_vs_sun.PNG>
 Package pdftex.def Info: ../data/img/Temp_vs_sun.PNG  used on input line 3.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
-<../data/img/Temp_vs_dThunderstorm.PNG, id=105, 481.8pt x 481.8pt>
+<../data/img/Temp_vs_dThunderstorm.PNG, id=118, 481.8pt x 481.8pt>
 File: ../data/img/Temp_vs_dThunderstorm.PNG Graphic file (type png)
 <use ../data/img/Temp_vs_dThunderstorm.PNG>
 Package pdftex.def Info: ../data/img/Temp_vs_dThunderstorm.PNG  used on input l
 ine 10.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
-<../data/img/Temp_vs_Precipitation.PNG, id=106, 481.8pt x 481.8pt>
+<../data/img/Temp_vs_Precipitation.PNG, id=119, 481.8pt x 481.8pt>
 File: ../data/img/Temp_vs_Precipitation.PNG Graphic file (type png)
 <use ../data/img/Temp_vs_Precipitation.PNG>
 Package pdftex.def Info: ../data/img/Temp_vs_Precipitation.PNG  used on input l
 ine 17.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
-<../data/img/correlation_plot.PNG, id=107, 481.8pt x 481.8pt>
+<../data/img/correlation_plot.PNG, id=120, 481.8pt x 481.8pt>
 File: ../data/img/correlation_plot.PNG Graphic file (type png)
 <use ../data/img/correlation_plot.PNG>
 Package pdftex.def Info: ../data/img/correlation_plot.PNG  used on input line 2
 4.
 (pdftex.def)             Requested size: 199.16928pt x 199.16399pt.
 
-Overfull \hbox (18.4895pt too wide) in paragraph at lines 31--44
+Overfull \hbox (41.09319pt too wide) in paragraph at lines 31--43
  [][] 
  []
 
@@ -612,48 +612,50 @@ Overfull \hbox (18.4895pt too wide) in paragraph at lines 31--44
 \tf@thm=\write4
 \openout4 = `report.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
- [5 <../data/img/Salt_Lake_Diff_QQ_Plot.PNG>] [6 <../data/img/Rye_Patch_Diff_QQ
-_Plot.PNG>] [7 <../data/img/Salt_Lake_Diff_QQ_Plot_missing_data.png> <../data/i
-mg/Rye_Patch_Diff_QQ_Plot_missing_data.png>] [8 <../data/img/Temp_vs_sun.PNG> <
-../data/img/Temp_vs_dThunderstorm.PNG>] [9 <../data/img/Temp_vs_Precipitation.P
-NG> <../data/img/correlation_plot.PNG (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
+ [6 <../data/img/Salt_Lake_Diff_QQ_Plot.PNG>] [7 <../data/img/Rye_Patch_Diff_QQ
+_Plot.PNG>] [8 <../data/img/Salt_Lake_Diff_QQ_Plot_missing_data.png> <../data/i
+mg/Rye_Patch_Diff_QQ_Plot_missing_data.png>] [9 <../data/img/Temp_vs_sun.PNG> <
+../data/img/Temp_vs_dThunderstorm.PNG>] [10 <../data/img/Temp_vs_Precipitation.
+PNG> <../data/img/correlation_plot.PNG (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: FE5394FDBACEC343EDC8AC5639F3B681;324.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
+(rerunfilecheck)             Checksum: 0A8D33B9026297E3FCAF569D5117897C;371.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 10156 strings out of 480790
- 167685 string characters out of 2895425
+ 10164 strings out of 480790
+ 167852 string characters out of 2895425
  617128 words of memory out of 3000000
- 25936 multiletter control sequences out of 15000+200000
+ 25939 multiletter control sequences out of 15000+200000
  538444 words of font info for 48 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,41p,1594b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,41p,1789b,374s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmcsc10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/bsterling/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/bsterling/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/bs
-terling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/bs
+terling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
 <C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><C:/Users/bsterling/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/bsterling/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/bsterling/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users
-/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.
-pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmti8.pfb>
-Output written on report.pdf (9 pages, 269280 bytes).
+m/cmmi8.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/bsterling/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/bsterling/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/bsterling/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users
+/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmti10.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmti8.pfb><C:/Users/bsterling/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on report.pdf (10 pages, 291845 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 229 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

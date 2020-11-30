@@ -15,8 +15,8 @@
 \begin{figure}
   \centering
   \includegraphics[width=7cm]{../data/img/Temp_vs_Precipitation.PNG}
-  \caption{Salt Lake City Temperature versus Percipitation}
-  \label{fig:temp_vs_percipitation}
+  \caption{Salt Lake City Temperature versus Precipation}
+  \label{fig:temp_vs_precipation}
 \end{figure}
 
 \begin{figure}
@@ -28,20 +28,19 @@
 
 \begin{table}[ht]
  \begin{centering}
- \begin{tabular}{|c|c c c c|} 
+ \begin{tabular}{|c|c c c c c|} 
  \hline
- $$ & Temperature & Minutes of Sun & Days of Thunderstorms & Precipitation \\ [0.5ex] 
+ $$ & & & & Days of & \\ [0.5ex] 
+ & Temperature & Intercept & Minutes of Sun & Thunderstorms & Precipitation \\
  \hline\hline
- $P_{Shapiro}$ & $2.662\times 10^{-8}$ & $6.845\times 10^{-9}$ & $9.438\times 10^{-15}$ & $2.817\times 10^{-12}$ \\ 
+ $P_{Shapiro}$ & $2.662\times 10^{-8}$ & -- & $6.845\times 10^{-9}$ & $9.438\times 10^{-15}$ & $2.817\times 10^{-12}$ \\ 
  \hline
- $\beta$ & -5.261 & $1.041\times 10^{-3}$ & 0.8471 & $-4.800\times 10^{-2}$ \\ 
+ $\beta$ & -- & -5.261 & $1.041\times 10^{-3}$ & 0.8471 & $-4.800\times 10^{-2}$ \\ 
  \hline
- $t-value$ &  & 20.447 & 10.464 & -5.242 \\ 
- \hline
- $n$ & 321 & 321 & 321 & 321 \\
+ $P(>|t|)$ & -- & $2.30\times 10^{-8}$ & $< 2.00\times 10^{-16}$ & $< 2.00\times 10^{-16}$ & $< 2.91\times 10^{-7}$ \\ 
  \hline
  \end{tabular}
- \caption{Multilinear Regression for predicting temperature ($R^{2} = 0.7969$)}
+ \caption{Multilinear Regression for Predicting Temperature (Adjusted $R^{2} = 0.7969$, $n = 321$)}
  \label{tab:lin_regression}
  \end{centering}
 \end{table}

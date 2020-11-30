@@ -15,21 +15,6 @@ Salt_Lake_Sun = (data_Salt_Lake$TSUN)[starting_index:ending_index];
 Salt_Lake_dThunderstorm = (data_Salt_Lake$DYTS)[starting_index:ending_index];
 Salt_Lake_Precipitation = (data_Salt_Lake$PRCP)[starting_index:ending_index];
 
-"
-for(i  in 1:length(Salt_Lake_Wind)){
-	if(is.na(Salt_Lake_Temperature[i])| is.na(Salt_Lake_Wind[i])){
-		Salt_Lake_Temperature[i] = NA;
-		Salt_Lake_Wind[i] = NA;
-	}
-}
-Salt_Lake_Wind = Salt_Lake_Wind[!is.na(Salt_Lake_Wind)];
-Salt_Lake_Temperature = Salt_Lake_Temperature[!is.na(Salt_Lake_Temperature)];
-print(length(Salt_Lake_Wind));
-"
-#png("img/Wind_v_temp.png");
-#plot(Salt_Lake_Wind, Salt_Lake_Temperature);
-#abline(lm(Salt_Lake_Temperature~Salt_Lake_Wind));
-
 Salt_Lake_Temperature = (data_Salt_Lake$TAVG)[starting_index:ending_index];
 
 # All values of 0 should go to NA:
@@ -89,36 +74,16 @@ plot(Salt_Lake_Precipitation, Salt_Lake_Temperature);
 abline(lm(Salt_Lake_Temperature~Salt_Lake_Precipitation));
 
 print(length(Salt_Lake_Sun))
-print(length(Salt_Lake_Temperature))
-
-Salt_Lake_dThunderstorm = Salt_Lake_dThunderstorm / length(Salt_Lake_dThunderstorm);
-
-#plot(Salt_Lake_dThunderstorm, Salt_Lake_Precipitation);
-
-#SANITY CHECK:
-"
-Salt_Lake_Temperature = (data_Salt_Lake$TAVG)[1:length(data_Salt_Lake$TAVG)];
-sun = (data_Salt_Lake$TSUN)[1:length(data_Salt_Lake$TSUN)];
-for(i  in 1:length(sun)){
-	if(is.na(sun[i])| is.na(Salt_Lake_Temperature[i])){
-		sun[i] = NA;
-		Salt_Lake_Temperature[i] = NA;
-	}
-}
-sun = sun[!is.na(sun)];
-Salt_Lake_Temperature = Salt_Lake_Temperature[!is.na(Salt_Lake_Temperature)];
-fit3 = lm(Salt_Lake_Temperature ~ sun);
-summary(fit3);
-"
 
 
-# Remove 10% of the data from each vector, then perform analysis again:
-#print("10% extra missing data:");
 
-Salt_Lake_Sun[sample(1:length(Salt_Lake_Sun), ceiling(0.1*length(Salt_Lake_Sun)))] = NA;
-Salt_Lake_Temperature[sample(1:length(Salt_Lake_Temperature), ceiling(0.1*length(Salt_Lake_Temperature)))] = NA;
-Salt_Lake_dThunderstorm[sample(1:length(Salt_Lake_dThunderstorm), ceiling(0.1*length(Salt_Lake_dThunderstorm)))] = NA;
-Salt_Lake_Precipitation[sample(1:length(Salt_Lake_Precipitation), ceiling(0.1*length(Salt_Lake_Precipitation)))] = NA;
+
+# Remove 5% of the data from each vector, then perform analysis again:
+
+Salt_Lake_Sun[sample(1:length(Salt_Lake_Sun), ceiling(0.05*length(Salt_Lake_Sun)))] = NA;
+Salt_Lake_Temperature[sample(1:length(Salt_Lake_Temperature), ceiling(0.05*length(Salt_Lake_Temperature)))] = NA;
+Salt_Lake_dThunderstorm[sample(1:length(Salt_Lake_dThunderstorm), ceiling(0.05*length(Salt_Lake_dThunderstorm)))] = NA;
+Salt_Lake_Precipitation[sample(1:length(Salt_Lake_Precipitation), ceiling(0.05*length(Salt_Lake_Precipitation)))] = NA;
 
 for(i  in 1:length(Salt_Lake_Sun)){
 	if(is.na(Salt_Lake_Sun[i])| is.na(Salt_Lake_Temperature[i]) | is.na(Salt_Lake_dThunderstorm[i]) | is.na(Salt_Lake_Precipitation[i])){
@@ -150,8 +115,8 @@ AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
 
-fit3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
-summary(fit3);
+fit = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
+summary(fit);
 
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
 
@@ -168,6 +133,3 @@ plot(Salt_Lake_Precipitation, Salt_Lake_Temperature);
 abline(lm(Salt_Lake_Temperature~Salt_Lake_Precipitation));
 
 print(length(Salt_Lake_Sun))
-print(length(Salt_Lake_Temperature))
-
-Salt_Lake_dThunderstorm = Salt_Lake_dThunderstorm / length(Salt_Lake_dThunderstorm);

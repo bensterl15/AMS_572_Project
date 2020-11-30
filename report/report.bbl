@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{mnar}
+{\sc J.~E. Galimard, S.~Chevret, C.~Protopopescu, and M.~Resche-Rigon}, {\em A
+  multiple imputation approach for MNAR mechanisms compatible with Heckman's
+  model}, Statistics in Medicine, 35(2016), pp. 2907-2920.
+
 \bibitem{gsom_data}
 {\sc J.~H. Lawrimore, R.~Ray, S.~Applequist, B.~Korzeniewski, and M.~J. Menne},
   {\em Global summary of the month (gsom) dataset, version 1}, 2016,
