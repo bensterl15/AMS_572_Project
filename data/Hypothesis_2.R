@@ -52,12 +52,25 @@ colnames(M) = c("Sunlight","Days of Thunderstorms","Precipitation");
 png("img/correlation_plot.png");
 corrplot(cor(M));
 
+print("AIC Values");
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
 
-fit1 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
-summary(fit1);
+print("BIC Values");
+BIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
+BIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
+BIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
+
+print("Multilinear Regression Reports");
+model1 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun);
+summary(model1);
+
+model2 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm);
+summary(model2);
+
+model3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
+summary(model3);
 
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
 
@@ -111,25 +124,26 @@ colnames(M) = c("Sunlight","Days of Thunderstorms","Precipitation");
 png("img/correlation_plot_missing_data.png");
 corrplot(cor(M));
 
+print("AIC Values");
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
 
-fit = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
-summary(fit);
+print("BIC Values");
+BIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
+BIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm))
+BIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation))
+
+print("Multilinear Regression Reports");
+model1 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun);
+summary(model1);
+
+model2 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm);
+summary(model2);
+
+model3 = lm(Salt_Lake_Temperature ~ Salt_Lake_Sun + Salt_Lake_dThunderstorm + Salt_Lake_Precipitation);
+summary(model3);
 
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
-
-png("img/Temp_vs_sun_missing_data.png");
-plot(Salt_Lake_Sun, Salt_Lake_Temperature);
-abline(lm(Salt_Lake_Temperature~Salt_Lake_Sun));
-
-png("img/Temp_vs_dThunderstorm_missing_data.png");
-plot(Salt_Lake_dThunderstorm, Salt_Lake_Temperature);
-abline(lm(Salt_Lake_Temperature~Salt_Lake_dThunderstorm));
-
-png("img/Temp_vs_Precipitation_missing_data.png");
-plot(Salt_Lake_Precipitation, Salt_Lake_Temperature);
-abline(lm(Salt_Lake_Temperature~Salt_Lake_Precipitation));
 
 print(length(Salt_Lake_Sun))
