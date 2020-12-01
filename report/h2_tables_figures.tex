@@ -8,15 +8,15 @@
 \begin{figure}
   \centering
   \includegraphics[width=7cm]{../data/img/Temp_vs_dThunderstorm.PNG}
-  \caption{Salt Lake City Temperature versus Days of Thunderstorms}
+  \caption{Salt Lake City Temperature versus Days with Thunderstorms}
   \label{fig:temp_vs_dthunderstorms}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics[width=7cm]{../data/img/Temp_vs_Precipitation.PNG}
-  \caption{Salt Lake City Temperature versus Precipation}
-  \label{fig:temp_vs_precipation}
+  \caption{Salt Lake City Temperature versus Precipitation}
+  \label{fig:temp_vs_precipitation}
 \end{figure}
 
 \begin{figure}
@@ -30,7 +30,7 @@
  \begin{centering}
  \begin{tabular}{|c|c c c c c|} 
  \hline
- $$ & & & & Days of & \\ [0.5ex] 
+ $$ & & & & Days with & \\ [0.5ex] 
  & Temperature & Intercept & Minutes of Sun & Thunderstorms & Precipitation \\
  \hline\hline
  $P_{Shapiro}$ & $2.662\times 10^{-8}$ & -- & $6.845\times 10^{-9}$ & $9.438\times 10^{-15}$ & $2.817\times 10^{-12}$ \\ 
@@ -40,7 +40,7 @@
  $P(>|t|)$ & -- & $2.30\times 10^{-8}$ & $< 2.00\times 10^{-16}$ & $< 2.00\times 10^{-16}$ & $< 2.91\times 10^{-7}$ \\ 
  \hline
  \end{tabular}
- \caption{Multilinear Regression for Predicting Temperature (Adjusted $R^{2} = 0.7969$, $n = 321$)}
+ \caption{Multiple Linear Regression for Predicting Temperature (Adjusted $R^{2} = 0.7969$, $n = 321$)}
  \label{tab:lin_regression}
  \end{centering}
 \end{table}
@@ -49,7 +49,7 @@
  \begin{centering}
  \begin{tabular}{|c|c c c|} 
  \hline
-  \# Variables & Minutes of Sun & Days of Thunderstorms & Precipitation \\
+  \# Variables & Minutes of Sun & Days with Thunderstorms & Precipitation \\
  \hline
  1 & * & & \\
   \hline
@@ -58,7 +58,7 @@
  3 & * & * & *\\ 
  \hline
  \end{tabular}
- \caption{Optimal Subset selection for Multilinear Regression}
+ \caption{Optimal Subset selection for Multiple Linear Regression}
  \label{tab:optimal_selection}
  \end{centering}
 \end{table}
@@ -76,7 +76,7 @@
  Adjusted $R^{2}$ & 0.7258 & 0.78 & 0.7969\\ 
  \hline
  \end{tabular}
- \caption{Model Information for Multilinear Regression}
+ \caption{Model Comparisons for Multiple Linear Regression}
  \label{tab:model_info}
  \end{centering}
 \end{table}
@@ -85,7 +85,7 @@
  \begin{centering}
  \begin{tabular}{|c|c c c c c|} 
  \hline
- $$ & & & & Days of & \\ [0.5ex] 
+ $$ & & & & Days with & \\ [0.5ex] 
  & Temperature & Intercept & Minutes of Sun & Thunderstorms & Precipitation \\
  \hline\hline
  $P_{Shapiro}$ & $3.259\times 10^{-7}$ & -- & $2.592\times 10^{-7}$ & $2.011\times 10^{-13}$ & $1.88\times 10^{-8}$ \\ 
@@ -95,7 +95,7 @@
  $P(>|t|)$ & -- & $4.85\times 10^{-6}$ & $< 2.00\times 10^{-16}$ & $< 2.00\times 10^{-16}$ & $< 1.94\times 10^{-8}$ \\ 
  \hline
  \end{tabular}
- \caption{Multilinear Regression for Predicting Temperature with Missing Data (Adjusted $R^{2} = 0.797$, $n = 260$)}
+ \caption{Multiple Linear Regression for Predicting Temperature with Missing Data (Adjusted $R^{2} = 0.797$, $n = 260$)}
  \label{tab:lin_regression_missing_data}
  \end{centering}
 \end{table}
@@ -113,7 +113,7 @@
  Adjusted $R^{2}$ & 0.7226 & 0.7713 & 0.797\\ 
  \hline
  \end{tabular}
- \caption{Model Information for Multilinear Regression with Missing Data}
+ \caption{Model Comparisons for Multiple Linear Regression with Missing Data}
  \label{tab:model_info_missing_data}
  \end{centering}
 \end{table}

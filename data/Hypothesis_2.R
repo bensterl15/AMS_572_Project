@@ -48,9 +48,9 @@ shapiro.test(Salt_Lake_Precipitation);
 
 # Generate Correlation Matrix:
 M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Precipitation)
-colnames(M) = c("Sunlight","Days of Thunderstorms","Precipitation");
+colnames(M) = c("Sunlight","Days with Thunderstorms","Precipitation");
 png("img/correlation_plot.png");
-corrplot(cor(M));
+corrplot(cor(M), tl.col="black");
 
 print("AIC Values");
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
@@ -127,9 +127,9 @@ shapiro.test(Salt_Lake_Precipitation);
 
 # Generate Correlation Matrix:
 M = cbind(Salt_Lake_Sun, Salt_Lake_dThunderstorm, Salt_Lake_Precipitation)
-colnames(M) = c("Sunlight","Days of Thunderstorms","Precipitation");
+colnames(M) = c("Sunlight","Days with Thunderstorms","Precipitation");
 png("img/correlation_plot_missing_data.png");
-corrplot(cor(M));
+corrplot(cor(M), tl.col="black");
 
 print("AIC Values");
 AIC(lm(Salt_Lake_Temperature ~ Salt_Lake_Sun))
