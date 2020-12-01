@@ -88,6 +88,13 @@ abline(lm(Salt_Lake_Temperature~Salt_Lake_Precipitation));
 
 print(length(Salt_Lake_Sun))
 
+# Calculate the prediction interval:
+new_value = data.frame(Salt_Lake_Sun = 15000, Salt_Lake_dThunderstorm = 4, Salt_Lake_Precipitation = 35)
+predict(model3, new_value, interval = "prediction", level = 0.95)
+
+
+
+
 
 
 
@@ -147,3 +154,7 @@ summary(model3);
 summary(regsubsets(Salt_Lake_Temperature ~ ., data=as.data.frame(M)));
 
 print(length(Salt_Lake_Sun))
+
+# Calculate the prediction interval:
+new_value = data.frame(Salt_Lake_Sun = 15000, Salt_Lake_dThunderstorm = 4, Salt_Lake_Precipitation = 35)
+predict(model3, new_value, interval = "prediction", level = 0.95)
