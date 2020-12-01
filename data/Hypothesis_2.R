@@ -26,7 +26,7 @@ for(i in 1:length(Salt_Lake_Sun)){
 	}
 }
 
-for(i  in 1:length(Salt_Lake_Sun)){
+for(i in 1:length(Salt_Lake_Sun)){
 	if(is.na(Salt_Lake_Sun[i])| is.na(Salt_Lake_Temperature[i]) | is.na(Salt_Lake_dThunderstorm[i]) | is.na(Salt_Lake_Precipitation[i])){
 		Salt_Lake_Sun[i] = NA;
 		Salt_Lake_Temperature[i] = NA;
